@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal</title>
+    <link rel="stylesheet" href="./asset/css/modal.css">
+</head>
+<body>
+    <div class="background">
+        <div class="modal_container">
+            <h1 class="first">Modal Project</h1>
+            <button id="open_btn">Open Modal</button>
+        </div>
+        <div class="blue_background">
+            <div class="modal_content">
+                <h1 class="second">Modal Content</h1>
+                <button class="close_btn">Close</button>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        let openBtn = document.getElementById("open_btn")
+        let closeBtn = document.querySelector(".close_btn")
+        let blueBackground = document.querySelector(".blue_background")
+
+        openBtn.addEventListener("click",()=>{
+            if (!blueBackground.classList.contains("show")){
+                blueBackground.classList.add("show")
+            }
+        })
+        closeBtn.addEventListener("click",()=>{
+            if (blueBackground.classList.contains("show")){
+                blueBackground.classList.remove("show")
+            }
+        })
+    </script>
+</body>
+</html>
